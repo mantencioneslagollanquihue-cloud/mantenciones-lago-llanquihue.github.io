@@ -1,14 +1,14 @@
-<!DOCTYPE html>
+h<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-7903390932"></script>
+<script async src="https://www.googletagmanhager.com/gtag/js?id=AW-18091141104"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'AW-7903390932');
+  gtag('config', 'AW-18091141104');
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -261,6 +261,28 @@ footer{background:var(--bg-mid);border-top:1px solid var(--border);padding:32px 
 .fade-in:nth-child(4){animation-delay:.3s;}
 @keyframes fadeIn{to{opacity:1;transform:translateY(0);}}
 </style>
+<!-- Google Ads Conversion Tracking -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var forms = document.querySelectorAll('form');
+        forms.forEach(function(form) {
+              form.addEventListener('submit', function() {
+                      gtag('event', 'conversion', {'send_to': 'AW-18091141104', 'event_category': 'formulario', 'event_label': 'solicitud_cotizacion'});
+                      gtag('event', 'generate_lead', {'event_category': 'formulario', 'event_label': 'solicitud_cotizacion', 'value': 70000, 'currency': 'CLP'});
+              });
+        });
+        document.addEventListener('click', function(e) {
+              var link = e.target.closest('a');
+              if (link && (link.href.indexOf('wa.me') > -1 || link.href.indexOf('whatsapp') > -1)) {
+                      gtag('event', 'conversion', {'send_to': 'AW-18091141104', 'event_category': 'whatsapp', 'event_label': 'click_whatsapp'});
+                      gtag('event', 'generate_lead', {'event_category': 'whatsapp', 'event_label': 'click_whatsapp', 'value': 70000, 'currency': 'CLP'});
+              }
+                    if (link && link.href.indexOf('tel:') === 0) {
+                            gtag('event', 'conversion', {'send_to': 'AW-18091141104', 'event_category': 'telefono', 'event_label': 'click_llamada'});
+                    }
+        });
+    });
+  </script>
 </head>
 <body>
 
